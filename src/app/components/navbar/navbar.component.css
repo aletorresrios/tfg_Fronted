@@ -1,0 +1,14 @@
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-buttons a,
+.auth-buttons button {
+  margin-left: 10px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
