@@ -1,0 +1,67 @@
+/* Estilo para el body */
+body {
+    background:  linear-gradient(to bottom right,#001F3F , #023E8A); /* Color de fondo para toda la página */
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Centro el contenedor principal verticalmente */
+  .bootstrap-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container {
+    background:  linear-gradient(to bottom right,black , rgb(82, 82, 82));
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 700px;  /* Establece el ancho máximo del contenedor */
+    border-radius: 150px;
+    border: 5px solid white;
+    
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  mat-form-field {
+    width: 80%;  /* Reduce el ancho del campo de entrada */
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 80%;  /* Ajusta el ancho de los botones */
+    margin-bottom: 10px;  /* Añade un margen inferior para separar los botones */
+  }
+  
+  img {
+    margin-bottom: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  .bu{
+    background-color: #7f7f7f;
+    color: white;
+  }
+  .ale{
+    color: white;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flex a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}

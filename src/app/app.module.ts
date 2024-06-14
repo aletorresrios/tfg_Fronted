@@ -21,6 +21,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { AuthInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { CarritoFlotanteComponent } from './components/carrito-flotante/carrito-flotante.component';
+import { FinalizarCompraComponent } from './pages/finalizar-compra/finalizar-compra.component';
+import { CrearProductoComponent } from './pages/crear-producto/crear-producto.component';
+import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    ProductosComponent,
+    CarritoComponent,
+    CarritoFlotanteComponent,
+    FinalizarCompraComponent,
+    CrearProductoComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule,

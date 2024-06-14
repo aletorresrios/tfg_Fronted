@@ -9,6 +9,8 @@ import { LoginService } from '../../services/login.service';
 export class NavbarComponent {
   isLoggedIn = false;
   user:any = null;
+  carritoAbierto = false;
+  isAdmin: boolean = false;
   constructor(public login:LoginService){}
 
   ngOnInit(): void{
@@ -18,13 +20,23 @@ export class NavbarComponent {
       data => {
         this.isLoggedIn = this.login.isLoggedIn();
         this.user = this.login.getUser();
+        this.isAdmin = this.login.isAdmin();
       }
     )
+    this.isAdmin = this.login.isAdmin();
+
 
   }
   public logout(){
     this.login.logout();
     window.location.reload();
   }
+  toggleCarrito() {
+    this.carritoAbierto = !this.carritoAbierto;
+  }
+  cerrarCarrito() {
+    this.carritoAbierto = false;
+  }
+
 
 }

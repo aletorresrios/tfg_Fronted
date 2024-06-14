@@ -1,0 +1,25 @@
+<div *ngIf="productosEnCarrito.length > 0; else carritoVacio" class="carrito-container">
+  <h2>Carrito de Compras</h2>
+  <div class="carrito-tarjetas">
+    <div *ngFor="let producto of productosEnCarrito" class="carrito-tarjeta">
+      <div class="carrito-imagen">
+        <img [src]="producto.imagenUrl" alt="Imagen del producto">
+      </div>
+      <div class="carrito-contenido">
+        <h5>{{ producto.nombre }}</h5>
+        <p>Precio: {{ producto.precio }}€</p>
+      </div>
+      <button class="btn-eliminar" (click)="eliminarProducto(producto)">Eliminar</button>
+    </div>
+  </div>
+  <div class="carrito-total">
+    <p>Total: {{ totalCarrito | currency }}</p>
+  </div>
+  <div class="carrito-botones">
+    <button (click)="vaciarCarrito()" class="btn-vaciar-carrito">Vaciar Carrito</button>
+    <button [routerLink]="'/finalizar-compra'" class="btn-finalizar-compra">Finalizar Compra</button>
+  </div>
+</div>
+<ng-template #carritoVacio>
+  <p>El carrito está vacío.</p>
+</ng-template>

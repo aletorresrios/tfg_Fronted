@@ -1,0 +1,44 @@
+body {
+  background:  linear-gradient(to bottom right,#001F3F , #023E8A);
+    color: #fff;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    border-radius: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  #carouselExample {
+    width: 600px; /* Anchura fija del carrusel */
+    margin-top: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  * {
+    border-radius: 100px;
+    
+  }
+  h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  p{
+    font-size: 25px;
+  }
+.festy{
+    background-color: white;
+    color: black;
+}
+.radi{
+  background:  linear-gradient(to bottom right,#001F3F , #023E8A);
+}
+  
+.nar{
+  background: radial-gradient(circle at center, #F58A19, #EA3528);
+}

@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { UserService } from './../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -15,7 +16,7 @@ export class SignupComponent implements OnInit{
     email: '',
   }
 
-  constructor(private userService:UserService, private snack:MatSnackBar){ }
+  constructor(private userService:UserService, private snack:MatSnackBar, router: Router){ }
 
   ngOnInit(): void{
 

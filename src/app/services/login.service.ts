@@ -61,4 +61,21 @@ export class LoginService {
   public getCurrentUser(){
     return this.http.get(`${baserUrl}/actual-usuario`);
   }
+  public getUserId(): number | null {
+    const userStr = localStorage.getItem('user');
+    if (userStr !== null) {
+      const user = JSON.parse(userStr);
+      return user.id;
+    } else {
+      this.logout();
+      return null;
+    }
+  }
+  public isAdmin(): boolean {
+    const user = this.getUser();
+    if (user && user.authorities) {
+      return user.authorities.some((auth: any) => auth.authority === 'ADMIN');
+    }
+    return false;
+  }
 }

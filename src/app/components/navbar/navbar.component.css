@@ -1,6 +1,7 @@
 .auth-buttons {
   display: flex;
   align-items: center;
+  
 }
 
 .auth-buttons a,
@@ -11,4 +12,24 @@
 .example-spacer {
   flex: 1 1 auto;
 }
-
+.carrito-container {
+  position: fixed;
+  top: 64px; /* Altura del toolbar */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con opacidad */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+.centered-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 61vh;
+}
+.alej{
+  font-size: 22px;
+}
+.arri{
+  background: radial-gradient(circle at center, #F58A19, #EA3528);}

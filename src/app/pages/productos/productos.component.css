@@ -1,0 +1,105 @@
+/* Estilos para el componente de productos */
+
+/* Contenedor principal */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  margin-top: 20px;
+}
+
+/* Columna para cada tarjeta de producto */
+.col-md-4 {
+  flex: 1 0 30%;
+  max-width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilo para cada tarjeta de producto */
+.card {
+  border: 5px solid #F58A19;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%; /* Hace que las tarjetas sean del mismo tamaño */
+  max-width: 400px; /* Puedes ajustar este valor según tus necesidades */
+  max-height: auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del producto */
+.card-img-top {
+  width: 300px;
+  height: auto;
+  display: block; /* Hace que la imagen se centre en la tarjeta */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin-top: 50px;
+}
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+  padding: 20px;
+  text-align: center; /* Centra el contenido del cuerpo de la tarjeta */
+}
+
+/* Estilo para el título del producto */
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center; /* Centra el título */
+}
+
+/* Estilo para la descripción del producto */
+.card-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para el precio del producto */
+.card-text:last-of-type {
+  font-weight: bold;
+}
+
+/* Estilo para el botón de comprar */
+.btn {
+  background-color: #F58A19;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto; /* Centra el botón horizontalmente */
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.fondo{
+  background:  linear-gradient(to bottom right,#001F3F , #023E8A);
+  padding-top: 3vh;
+}
+/* Estilo para el contenedor principal */
+.container {
+  max-width: 480px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Añade un espacio alrededor del contenido */
+  color: #fff;
+  background: radial-gradient(circle at center, #F58A19, #EA3528);
+  text-align: center;
+  border-radius: 50px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; 
+  
+}
+
+

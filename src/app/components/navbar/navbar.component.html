@@ -1,50 +1,70 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="arri">
+  <a
+    [routerLink]="'/'"
+    mat-icon-button
+    class="material-symbols-outlined"
+    arial-label="Example icon-button with menu icon"
+  >
+    <img src="../../../assets/consola-de-juego.png" alt="" >
+  </a>
+  <button *ngIf="isLoggedIn && user" mat-button class="example-icon favorite-icon alej" aria-label="Example icon-button with heart icon">
+    Bienvenido {{ user.username }}!!
+  </button>
+  <span class="example-spacer"></span>
+  <div class="auth-buttons">
+    <!-- Aquí cambiamos el orden para poner el botón de carrito al final -->
     <a
-      [routerLink]="'/'"
-      mat-icon-button
-      class="example-icon"
-      arial-label="Example icon-button with menu icon"
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/login'"
+      mat-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
     >
-      <mat-icon>menu_books</mat-icon>
+      Iniciar sesión
     </a>
-    <span>Portal de exámenes</span>
-    <span class="example-spacer"></span>
-    <div class="auth-buttons">
-      <a
-        *ngIf="!isLoggedIn"
-        [routerLink]="'/login'"
-        mat-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        Iniciar sesión
-      </a>
-      <a
-        *ngIf="!isLoggedIn"
-        [routerLink]="'/signup'"
-        mat-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        Registrar
-      </a>
-      <a
-        *ngIf="isLoggedIn"
-        (click)="logout()"
-        mat-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        Cerrar sesión
-      </a>
-      <button
-        *ngIf="isLoggedIn && user"
-        mat-button
-        class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon"
-      >
-        {{ user.username }}
-      </button>
-    </div>
-  </mat-toolbar>
+    <a
+      *ngIf="!isLoggedIn"
+      [routerLink]="'/signup'"
+      mat-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      Registrar
+    </a>
+    <button *ngIf="isAdmin" [routerLink]="'/admin'" mat-button class="admin-button">
+      Administración
+    </button>
+    <!-- Nuevo botón para catálogo -->
+    <button *ngIf="isLoggedIn" mat-button [routerLink]="'/productos'" class="example-icon favorite-icon" aria-label="Catálogo">
+      Catálogo
+    </button>
+    <!-- Nuevo botón para contactar -->
+    <button *ngIf="isLoggedIn" mat-button [routerLink]="'/contactar'" class="example-icon favorite-icon" aria-label="Contactar">
+      Contactar
+    </button>
+    <!-- Botón de ayuda -->
+    <button mat-button class="example-icon favorite-icon material-symbols-outlined" aria-label="Ayuda" >
+      <img src="../../../assets/pregunta.png" alt="" width="35" height="35">
+    </button>
+    
+    
+    <button *ngIf="isLoggedIn" mat-button class="carrito-button material-symbols-outlined" (click)="toggleCarrito()">
+      <img src="../../../assets/carrito-de-compras.png" alt="" width="30" height="30">
+    </button>
+    <a
+      *ngIf="isLoggedIn"
+      (click)="logout()"
+      mat-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <img src="../../../assets/cerrar-sesion.png" alt="" width="35" height="35">
+    </a>
+    
+  </div>
+</mat-toolbar>
+
+  <div class="carrito-container" *ngIf="carritoAbierto">
+    <app-carrito-flotante class="carrito-flotante"></app-carrito-flotante>
+  </div>
   

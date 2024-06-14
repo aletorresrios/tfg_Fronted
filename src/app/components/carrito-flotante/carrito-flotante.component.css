@@ -1,0 +1,77 @@
+.carrito-container {
+  position: fixed;
+  top: 64px; /* Altura del toolbar */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  background-color: rgba(255, 255, 255, 0.9); /* Color de fondo con opacidad */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-height: 400px; /* Altura máxima del carrito */
+  overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es demasiado largo */
+}
+
+.carrito-tarjetas {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección de la disposición a vertical */
+  gap: 16px; /* Espacio entre las tarjetas */
+}
+
+.carrito-tarjeta {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Añade separación entre los elementos dentro de la tarjeta */
+}
+
+.carrito-imagen img {
+  width: 100px; /* Ancho fijo para la imagen */
+  height: auto; /* Altura ajustada automáticamente */
+  margin-right: 16px; /* Espaciado entre la imagen y el contenido */
+}
+
+.carrito-contenido {
+  flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+}
+
+.btn-eliminar {
+  background-color: #ff5555; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Elimina el borde del botón */
+  padding: 8px 16px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+.carrito-total {
+  margin-top: 16px; /* Espacio superior */
+  font-size: 1.2em; /* Tamaño de fuente mayor */
+  font-weight: bold; /* Negrita */
+  text-align: right; /* Alineación a la derecha */
+}
+
+.carrito-botones {
+  display: flex;
+  justify-content: space-between; /* Asegura que los botones estén alineados uno al lado del otro con espacio entre ellos */
+  margin-top: 16px; /* Espacio superior */
+}
+
+.btn-vaciar-carrito,
+.btn-finalizar-compra {
+  background-color: #007bff; /* Color de fondo azul para los botones */
+  color: white; /* Color del texto */
+  border: none; /* Elimina el borde del botón */
+  padding: 8px 16px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+
+.btn-finalizar-compra {
+  background-color: #4caf50; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-top: 16px; /* Espacio superior */
+}
