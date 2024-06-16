@@ -1,1 +1,11 @@
-<h1>paneladmin</h1>
+<body class="body">
+    <div class="container">
+        <h1 class="title">Panel de Administración</h1>
+        <h2 class="title">Seleccione una de las opciones</h2>
+        <div class="button-container">
+            <a [routerLink]="'/lista-usuarios'" class="button">Administrar Usuarios</a>
+            <a [routerLink]="'/crear-producto'" class="button">Crear Producto</a>
+            <a [routerLink]="'/crear-admin'" class="button">Registrar admin</a>
+        </div>
+    </div>
+</body>

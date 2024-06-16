@@ -11,6 +11,10 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { FinalizarCompraComponent } from './pages/finalizar-compra/finalizar-compra.component';
 import { CrearProductoComponent } from './pages/crear-producto/crear-producto.component';
 import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
+import { EditarUsuarioComponent } from './pages/editar-usuario/editar-usuario.component';
+import { AyudaComponent } from './pages/ayuda/ayuda.component';
+import { CrearAdminComponent } from './pages/crear-admin/crear-admin.component';
+import { ContactaComponent } from './pages/contacta/contacta.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
@@ -22,7 +26,11 @@ const routes: Routes = [
   {path: 'carrito', component: CarritoComponent, pathMatch: 'full'},
   {path: 'finalizar-compra', component: FinalizarCompraComponent, pathMatch: 'full'},
   {path: 'crear-producto', component: CrearProductoComponent, pathMatch: 'full'},
-  {path: 'lista-usuarios', component: ListaUsuariosComponent, pathMatch: 'full'}
+  {path: 'lista-usuarios', component: ListaUsuariosComponent, pathMatch: 'full'},
+  {path: 'usuarios/editar/:id', component: EditarUsuarioComponent, pathMatch: 'full'},
+  {path: 'ayuda', component: AyudaComponent, pathMatch: 'full'},
+  {path: 'crear-admin', component: CrearAdminComponent, pathMatch: 'full'},
+  {path: 'contacta', component: ContactaComponent, pathMatch: 'full'}
 
 
 ];

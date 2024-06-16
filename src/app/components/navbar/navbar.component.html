@@ -39,17 +39,17 @@
       Catálogo
     </button>
     <!-- Nuevo botón para contactar -->
-    <button *ngIf="isLoggedIn" mat-button [routerLink]="'/contactar'" class="example-icon favorite-icon" aria-label="Contactar">
+    <button *ngIf="isLoggedIn" mat-button [routerLink]="'/contacta'" class="example-icon favorite-icon" aria-label="Contactar">
       Contactar
     </button>
     <!-- Botón de ayuda -->
-    <button mat-button class="example-icon favorite-icon material-symbols-outlined" aria-label="Ayuda" >
+    <button mat-button class="example-icon favorite-icon material-symbols-outlined" aria-label="Ayuda" [routerLink]="'/ayuda'">
       <img src="../../../assets/pregunta.png" alt="" width="35" height="35">
     </button>
     
     
     <button *ngIf="isLoggedIn" mat-button class="carrito-button material-symbols-outlined" (click)="toggleCarrito()">
-      <img src="../../../assets/carrito-de-compras.png" alt="" width="30" height="30">
+      <img src="../../../assets/bienes.png" alt="" width="30" height="30">
     </button>
     <a
       *ngIf="isLoggedIn"

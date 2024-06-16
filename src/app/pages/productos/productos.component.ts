@@ -10,6 +10,8 @@ import { CarritoService } from '../../services/carrito.service';
 export class ProductosComponent implements OnInit{
 
   productos: any[] = [];
+  paginaActual: number = 1; // Página actual, comienza en la página 1
+  productosPorPagina: number = 10; // Cantidad de productos por página
 
   constructor(private productoService: ProductoService, private carritoService: CarritoService){}
   ngOnInit(): void {
@@ -24,6 +26,8 @@ export class ProductosComponent implements OnInit{
   agregarAlCarrito(producto: Producto) {
     this.carritoService.agregarProducto(producto);
   }
-
+  cambiarPagina(numeroPagina: number) {
+    this.paginaActual = numeroPagina;
+  }
 
 }

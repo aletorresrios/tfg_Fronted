@@ -22,4 +22,7 @@ export class ListaUsuariosComponent {
       this.usuarios = this.usuarios.filter(usuario => usuario.id !== id);
     });
   }
+  editarUsuario(id: number): void {
+    this.router.navigate(['/usuarios/editar', id]);
+  }
 }

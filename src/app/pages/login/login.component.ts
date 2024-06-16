@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginService } from '../../services/login.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -41,11 +42,13 @@ export class LoginComponent {
           if(this.loginService.getUserRole()== "ADMIN"){
             //dashboard admin
             //window.location.href= '/admin';
+            Swal.fire('Has inciado sesion correctamente', 'Sesion iniciado exitosamente', 'success')
             this.router.navigate(['admin']);
             this.loginService.loginStatusSubjec.next(true);
           }else if(this.loginService.getUserRole()== "NORMAL"){
             //dashboard user
             //window.location.href= '/user-dashboard';
+            Swal.fire('Has inciado sesion correctamente', 'Sesion iniciado exitosamente', 'success')
             this.router.navigate(['']);
             this.loginService.loginStatusSubjec.next(true); 
           }else{

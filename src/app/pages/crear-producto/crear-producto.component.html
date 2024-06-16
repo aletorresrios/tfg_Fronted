@@ -1,24 +1,31 @@
-<form (ngSubmit)="onSubmit()" #productoForm="ngForm">
-    <div>
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" required [(ngModel)]="producto.nombre" name="nombre">
-    </div>
+<body>
   
-    <div>
-      <label for="precio">Precio</label>
-      <input type="number" id="precio" required [(ngModel)]="producto.precio" name="precio">
-    </div>
-  
-    <div>
-      <label for="descripcion">Descripción</label>
-      <input type="text" id="descripcion" required [(ngModel)]="producto.descripcion" name="descripcion">
-    </div>
-  
-    <div>
-      <label for="imagenUrl">URL de la Imagen</label>
-      <input type="text" id="imagenUrl" [(ngModel)]="producto.imagenUrl" name="imagenUrl">
-    </div>
-  
-    <button type="submit">Crear Producto</button>
+
+<div class="container">
+  <h1>Crear producto</h1>
+  <p>Rellena el formulario y pulse el boton</p>
+  <form (ngSubmit)="onSubmit()" #productoForm="ngForm" class="product-form">
+      <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required [(ngModel)]="producto.nombre" name="nombre">
+      </div>
+
+      <div>
+          <label for="precio">Precio (€)</label>
+          <input type="number" id="precio" required [(ngModel)]="producto.precio" name="precio">
+      </div>
+
+      <div>
+          <label for="descripcion">Descripción</label>
+          <input type="text" id="descripcion" required [(ngModel)]="producto.descripcion" name="descripcion">
+      </div>
+
+      <div>
+          <label for="imagenUrl">URL de la Imagen</label>
+          <input type="text" id="imagenUrl" [(ngModel)]="producto.imagenUrl" name="imagenUrl">
+      </div>
+
+      <button type="submit">Crear Producto</button>
   </form>
-  
+</div>
+</body>

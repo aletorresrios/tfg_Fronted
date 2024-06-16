@@ -19,6 +19,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthInterceptorProviders } from './services/auth.interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProductosComponent } from './pages/productos/productos.component';
@@ -27,6 +28,10 @@ import { CarritoFlotanteComponent } from './components/carrito-flotante/carrito-
 import { FinalizarCompraComponent } from './pages/finalizar-compra/finalizar-compra.component';
 import { CrearProductoComponent } from './pages/crear-producto/crear-producto.component';
 import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.component';
+import { EditarUsuarioComponent } from './pages/editar-usuario/editar-usuario.component';
+import { AyudaComponent } from './pages/ayuda/ayuda.component';
+import { CrearAdminComponent } from './pages/crear-admin/crear-admin.component';
+import { ContactaComponent } from './pages/contacta/contacta.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,11 @@ import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.co
     CarritoFlotanteComponent,
     FinalizarCompraComponent,
     CrearProductoComponent,
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+    EditarUsuarioComponent,
+    AyudaComponent,
+    CrearAdminComponent,
+    ContactaComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +64,8 @@ import { ListaUsuariosComponent } from './pages/lista-usuarios/lista-usuarios.co
     MatSnackBarModule,
     MatCardModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
     
   ],
   providers: [

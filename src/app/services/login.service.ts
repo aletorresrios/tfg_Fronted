@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import baserUrl from './helper';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,7 @@ export class LoginService {
   public logout(){
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    Swal.fire('Has cerrado sesion', 'Sesion cerrada correctamente', 'success')
     this.router.navigate(['/']);
     return true;
   }

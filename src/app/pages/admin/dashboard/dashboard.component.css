@@ -1,0 +1,59 @@
+.body {
+    
+    background:  radial-gradient(circle at center, #001F3F , #023E8A);
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    border-radius: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.title {
+    margin-top: 50px; /* Ajusta esta cantidad según necesites */
+    margin-bottom: 50px; /* Separación del contenedor de botones */
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px; /* Ajusta esta cantidad según necesites */
+    padding: 20px; /* Espacio interior del contenedor */
+    border: 4px solid #F58A19; /* Borde del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 300px; /* Ajusta el ancho del contenedor */
+    margin-left: auto; /* Centra el contenedor horizontalmente */
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+    background: radial-gradient(circle at center, #ffffff, #808080);
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: #0056b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%; /* Hace que los botones ocupen todo el ancho del contenedor */
+    text-align: center; /* Centra el texto en los botones */
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: black;
+}
+h2{
+    font-size: 30px;
+
+}

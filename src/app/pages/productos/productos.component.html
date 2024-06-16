@@ -1,19 +1,29 @@
 <body class="fondo">
   <div class="container">
     <h2>Listado de Productos</h2>
-</div>
-<div class="row">
-  <div class="col-md-4" *ngFor="let producto of productos">
-    <div class="card">
-      <div class="card-img-container">
-        <img class="card-img-top" [src]="producto.imagenUrl" alt="Imagen del producto">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">{{ producto.nombre }}</h5>
-        <p class="card-text">Precio: {{ producto.precio }} €</p>
-        <button (click)="agregarAlCarrito(producto)" class="btn btn-primary">Agregar al Carrito</button>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let producto of productos.slice((paginaActual - 1) * productosPorPagina, paginaActual * productosPorPagina)">
+      <!-- Utilizamos slice para mostrar solo los productos de la página actual -->
+      <div class="card">
+        <div class="card-img-container">
+          <img class="card-img-top" [src]="producto.imagenUrl" alt="Imagen del producto">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">Precio: {{ producto.precio }} €</p>
+          <button (click)="agregarAlCarrito(producto)" class="btn btn-primary">Agregar al Carrito</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <!-- Agregamos los controles de paginación -->
+  <div class="pagination">
+    <button class="btn btn-sm btn-primary" (click)="cambiarPagina(paginaActual - 1)" [disabled]="paginaActual === 1">Anterior</button>
+    <!-- Botón para ir a la página anterior, deshabilitado si estamos en la primera página -->
+    <span class="container">Página {{ paginaActual }}</span>
+    <!-- Mostramos el número de la página actual -->
+    <button class="btn btn-sm btn-primary" (click)="cambiarPagina(paginaActual + 1)" [disabled]="productos.length < productosPorPagina * paginaActual">Siguiente</button>
+    <!-- Botón para ir a la página siguiente, deshabilitado si no hay más productos -->
+  </div>
 </body>

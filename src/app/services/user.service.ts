@@ -19,10 +19,19 @@ export class UserService {
   public añadirUsario(user:any){
     return this.http.post(`${baserUrl}/usuarios/`,user)
   }
+  public añadirAdmin(user:any){
+    return this.http.post(`${baserUrl}/usuarios/admin`,user)
+  }
   eliminarUsuario(id: number): Observable<void> {
     return this.http.delete<void>(`${baserUrl}/usuarios/${id}`);
   }
   getUsuarios(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(`${baserUrl}/usuarios`);
+  }
+  actualizarUsuario(id: number, usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(`${baserUrl}/usuarios/${id}`, usuario);
+  }
+  getUsuario(id: number): Observable<Usuario> {
+    return this.http.get<Usuario>(`${baserUrl}/usuarios/${id}`);
   }
 }

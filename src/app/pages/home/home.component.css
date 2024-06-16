@@ -42,3 +42,18 @@ body {
 .nar{
   background: radial-gradient(circle at center, #F58A19, #EA3528);
 }
+/* Estilo para el botón de comprar */
+.btn {
+  background: radial-gradient(circle at center, #F58A19, #EA3528);  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 18px;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto; /* Centra el botón horizontalmente */
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

@@ -1,14 +1,15 @@
-import { Component, OnInit} from '@angular/core';
-import { UserService } from './../../services/user.service';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import Swal from 'sweetalert2'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  selector: 'app-crear-admin',
+  templateUrl: './crear-admin.component.html',
+  styleUrl: './crear-admin.component.css'
 })
-export class SignupComponent implements OnInit{
+export class CrearAdminComponent implements OnInit{
   public user={
     username: '',
     password: '',
@@ -51,18 +52,20 @@ export class SignupComponent implements OnInit{
       });
       return;
     }
-    this.userService.añadirUsario(this.user).subscribe(
+    this.userService.añadirAdmin(this.user).subscribe(
       (data) =>{
         console.log(data);
-        Swal.fire('Usuario guardado', 'Usuario registrado con exito', 'success')
-        this.router.navigate(['login']);
+        Swal.fire('Administrador creado', 'Administrador registrado con exito', 'success')
+        this.router.navigate(['admin']);
       },(error) =>{
         console.log(error);
-        this.snack.open('El nombre de usuario ya existe', 'Aceptar',{
+        this.snack.open('Ha ocurrido un error en el sistema', 'Aceptar',{
           duration:3000,
         });
       }
     )
+    
   }
+
 
 }

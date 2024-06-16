@@ -4,6 +4,7 @@ import { Producto } from '../../services/producto.service';
 import { Pedido, PedidoService } from '../../services/pedido.service';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-finalizar-compra',
@@ -30,7 +31,7 @@ export class FinalizarCompraComponent {
 
     this.pedidoService.crearPedido(nuevoPedido).subscribe(
       (pedido) => {
-        alert('Compra finalizada con éxito!');
+        Swal.fire('Compra exitosa', 'Ha realizado con exito su compra', 'success')
         this.carritoService.vaciarCarrito();
         this.router.navigate(['/']);
       },
@@ -43,5 +44,7 @@ export class FinalizarCompraComponent {
   get totalCarrito(): number {
     return this.productosEnCarrito.reduce((total, producto) => total + producto.precio, 0);
   }
+  
+
 
 }

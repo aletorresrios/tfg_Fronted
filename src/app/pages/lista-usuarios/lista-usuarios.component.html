@@ -5,7 +5,7 @@
         <th>Username</th>
         <th>Nombre</th>
         <th>Email</th>
-        <th>Acciones</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +15,6 @@
         <td>{{ usuario.nombre }}</td>
         <td>{{ usuario.email }}</td>
         <td>
-          <button >Editar</button>
           <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
         </td>
       </tr>
